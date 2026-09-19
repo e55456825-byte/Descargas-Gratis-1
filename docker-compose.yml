@@ -1,0 +1,17 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    # Tiempo que docker espera al apagado limpio (SIGTERM) antes de
+    # matar el contenedor: permite que las subidas activas terminen.
+    stop_grace_period: 30m
+    env_file:
+      - .env
+    environment:
+      - ROOT_DIR=/app/raiz
+      - DATA_DIR=/app/data
+      - LOGS_DIR=/app/logs
+    volumes:
+      - ./data:/app/data
+      - ./raiz:/app/raiz
+      - ./logs:/app/logs

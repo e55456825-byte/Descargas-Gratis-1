@@ -1,0 +1,22 @@
+# Dependencias de Bit Uploader v2
+# Bot de Telegram modular con subida a OJS + BitZero ofuscation
+
+# ── Telegram client ───────────────────────────────────────────────
+pyrogram==2.0.106
+tgcrypto==1.2.5
+
+# ── HTTP / scraping ───────────────────────────────────────────────
+requests==2.31.0
+beautifulsoup4==4.12.3
+urllib3==2.0.7
+
+# ── Async SQLite ──────────────────────────────────────────────────
+aiosqlite==0.19.0
+
+# ── ZIP encriptado con AES (BUG-04 fix) ──────────────────────────
+pyzipper
+# ── Misc ──────────────────────────────────────────────────────────
+aiohttp==3.9.3
+psutil==5.9.6
+# Carga de variables de entorno desde .env
+python-dotenv==1.0.0
